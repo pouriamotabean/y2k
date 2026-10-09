@@ -1,0 +1,27 @@
+name: Build VST3 Plugin
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Configure CMake
+      run: cmake -B build -G "Visual Studio 17 2022" -A x64
+
+    - name: Build VST3
+      run: cmake --build build --config Release --target CyberWaveY2KSynth_VST3
+
+    - name: Upload VST3 Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: CyberWave-Y2K-VST3
+        path: build/CyberWaveY2KSynth_artefacts/Release/VST3/CyberWave Y2K Synth.vst3
