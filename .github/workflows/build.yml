@@ -24,4 +24,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: CyberWave-Y2K-VST3
-        path: build/CyberWaveY2KSynth_artefacts/Release/VST3/CyberWave Y2K Synth.vst3
+        path: build/CyberWaveY2KSynth_artefacts/Release/VST3/
