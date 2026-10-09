@@ -91,12 +91,12 @@ void CyberWaveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
 void CyberWaveAudioProcessor::loadPresetById(int presetId)
 {
     switch (presetId) {
-        case 2:  wetDelayAmount = 0.05f; break; // Bass
-        case 4:  wetDelayAmount = 0.45f; break; // Lead
-        case 6:  wetDelayAmount = 0.65f; break; // Pluck
-        case 8:  wetDelayAmount = 0.50f; break; // Key
-        case 10: wetDelayAmount = 0.30f; break; // Piano
-        case 11: wetDelayAmount = 0.25f; break; // Stab
+        case 2:  wetDelayAmount = 0.05f; break;
+        case 4:  wetDelayAmount = 0.45f; break;
+        case 6:  wetDelayAmount = 0.65f; break;
+        case 8:  wetDelayAmount = 0.50f; break;
+        case 10: wetDelayAmount = 0.30f; break;
+        case 11: wetDelayAmount = 0.25f; break;
         default: break;
     }
 }
