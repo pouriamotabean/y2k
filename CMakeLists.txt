@@ -4,7 +4,6 @@ project(CyberWaveY2KSynth VERSION 1.0.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Fetch JUCE automatically via CMake
 include(FetchContent)
 FetchContent_Declare(
     juce
